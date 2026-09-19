@@ -1,5 +1,6 @@
 // skill: frontend-react — App per checklist §5
 import Navbar from './components/Navbar';
+import ErrorBoundary from './components/ErrorBoundary';
 import Hero from './components/Hero';
 import Problem from './components/Problem';
 import Portfolio from './components/Portfolio';
@@ -17,12 +18,20 @@ export default function App() {
     <div className="min-h-screen bg-void">
       <Navbar />
       <main>
-        <Hero />
+        <ErrorBoundary label="hero">
+          <Hero />
+        </ErrorBoundary>
         <Problem />
         <Portfolio />
-        <Worlds />
-        <Characters />
-        <Paper3D />
+        <ErrorBoundary label="mondes">
+          <Worlds />
+        </ErrorBoundary>
+        <ErrorBoundary label="personnages">
+          <Characters />
+        </ErrorBoundary>
+        <ErrorBoundary label="papier">
+          <Paper3D />
+        </ErrorBoundary>
         <Program />
         <Method />
         <SocialProof />
