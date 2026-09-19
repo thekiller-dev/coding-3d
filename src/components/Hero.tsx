@@ -21,6 +21,10 @@ export default function Hero() {
       <div aria-hidden="true" className="hero-grid absolute inset-0" />
       <div
         aria-hidden="true"
+        className="absolute inset-0 bg-[radial-gradient(ellipse_65%_60%_at_50%_42%,rgba(9,11,24,0.88),rgba(9,11,24,0.35)_55%,transparent_75%)]"
+      />
+      <div
+        aria-hidden="true"
         className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-void to-transparent"
       />
       <div className="relative mx-auto flex min-h-[92svh] max-w-6xl flex-col items-center justify-center px-4 py-20 text-center md:px-6">
@@ -41,7 +45,7 @@ export default function Hero() {
           </h1>
         </Reveal>
         <Reveal delay={240}>
-          <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-slate-400 md:text-xl">
+          <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-slate-100 [text-shadow:0_2px_14px_rgba(9,11,24,0.95)] md:text-xl">
             Coding Pro 3D : 8 modules, 60+ leçons, 5 projets réels. De ton premier cube
             Three.js à des shaders GLSL qui décrochent des clients.
           </p>
